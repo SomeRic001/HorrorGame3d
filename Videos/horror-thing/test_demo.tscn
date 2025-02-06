@@ -1,0 +1,77 @@
+[gd_scene load_steps=13 format=3 uid="uid://dw2x1xd18xx0r"]
+
+[ext_resource type="PackedScene" uid="uid://dd17b8k81gw7" path="res://room_1.tscn" id="1_3uq2y"]
+[ext_resource type="PackedScene" uid="uid://bw2ctgetgebuf" path="res://stair.tscn" id="1_v0sa4"]
+[ext_resource type="PackedScene" uid="uid://c2l5a6p4ak47u" path="res://corridor.tscn" id="2_sotho"]
+[ext_resource type="PackedScene" uid="uid://dqsa4fxf5bs2n" path="res://hallway.tscn" id="4_x34a1"]
+[ext_resource type="PackedScene" uid="uid://bi37m670asuqx" path="res://xtra.tscn" id="5_8esmt"]
+[ext_resource type="PackedScene" uid="uid://c4o5tnnbgt0rx" path="res://kitchen.tscn" id="6_mk2eo"]
+[ext_resource type="PackedScene" uid="uid://vpnggjuvhbcd" path="res://l_iving.tscn" id="7_u3rkn"]
+[ext_resource type="PackedScene" uid="uid://dkk16xvedqise" path="res://finalroom.tscn" id="8_w037p"]
+[ext_resource type="PackedScene" uid="uid://bbgssgnxahqgo" path="res://barthroom.tscn" id="9_jp34d"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o4v25"]
+sky_top_color = Color(0.143568, 0.179274, 0.228927, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_lghvn"]
+sky_material = SubResource("ProceduralSkyMaterial_o4v25")
+
+[sub_resource type="Environment" id="Environment_k8ij0"]
+background_mode = 2
+background_energy_multiplier = 0.7
+sky = SubResource("Sky_lghvn")
+ambient_light_color = Color(0.74978, 0.74978, 0.74978, 1)
+reflected_light_source = 1
+fog_light_color = Color(0.339289, 0.369116, 0.416002, 1)
+fog_light_energy = 4.54
+fog_aerial_perspective = 0.675
+fog_sky_affect = 0.0
+
+[node name="Test-demo" type="Node3D"]
+transform = Transform3D(0.998076, 0, 0, 0, 0.998076, 0, 0, 0, 0.998076, 0, 0, 0)
+
+[node name="Stair" parent="." instance=ExtResource("1_v0sa4")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.42907, 5, 24.75)
+
+[node name="Stair2" parent="." instance=ExtResource("1_v0sa4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.2, 5.005, 39.386)
+
+[node name="ROOM1" parent="." instance=ExtResource("1_3uq2y")]
+
+[node name="Corridor" parent="." instance=ExtResource("2_sotho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.545, 0.022, 9.88)
+
+[node name="Corridor3" parent="." instance=ExtResource("2_sotho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.549, 8.993, 38.997)
+
+[node name="Corridor2" parent="." instance=ExtResource("2_sotho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.2928, 0.022, 10.4198)
+
+[node name="Hallway" parent="." instance=ExtResource("4_x34a1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.402, 0.027, 10.249)
+
+[node name="XTRA" parent="." instance=ExtResource("5_8esmt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 54.21, 0.022, 15.1756)
+
+[node name="kitchen" parent="." instance=ExtResource("6_mk2eo")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 54.21, 0.022, 34.58)
+
+[node name="LIving" parent="." instance=ExtResource("7_u3rkn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.713, 9.01, 49.67)
+
+[node name="Final" parent="." instance=ExtResource("8_w037p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 9.01, 63.9437)
+
+[node name="DungeonRoom3D" parent="." instance=ExtResource("9_jp34d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 14.445, 9.09, 69.7)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_k8ij0")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.524818, 0.851214, 0, -0.851214, 0.524818, 0, 4.45734, 0)
+visible = false
+light_energy = 10.0
