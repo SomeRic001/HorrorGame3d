@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=4 uid="uid://cytf6tn4t4qid"]
+[gd_scene load_steps=18 format=4 uid="uid://cytf6tn4t4qid"]
 
 [ext_resource type="Script" path="res://door_2.gd" id="1_2d403"]
 [ext_resource type="Texture2D" uid="uid://b88f214lbdali" path="res://door__wodeen_old__brown_0.png" id="1_dnlxa"]
 [ext_resource type="Texture2D" uid="uid://dv0fyv3l8sq27" path="res://door__wodeen_old__brown_1.png" id="2_g615g"]
 [ext_resource type="Texture2D" uid="uid://ckxdaxadevmi8" path="res://door__wodeen_old__brown_2.png" id="3_8n12r"]
 [ext_resource type="AudioStream" uid="uid://be2gxxn1wkyiq" path="res://463777__supersnd__door-opening8.wav" id="4_608wx"]
+[ext_resource type="FontFile" uid="uid://cqtq301rhki5y" path="res://Sarun-Regular.ttf" id="5_oe6be"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h0ais"]
 resource_name = "material"
@@ -225,11 +226,12 @@ libraries = {
 }
 
 [node name="Label" type="Label" parent="."]
-offset_left = 354.0
-offset_top = 605.0
-offset_right = 866.0
-offset_bottom = 647.0
-theme_override_font_sizes/font_size = 30
+offset_left = 18.0
+offset_top = 219.0
+offset_right = 530.0
+offset_bottom = 261.0
+theme_override_fonts/font = ExtResource("5_oe6be")
+theme_override_font_sizes/font_size = 20
 text = "Press 'E' to open and close the door"
 
 [node name="doorsong" type="AudioStreamPlayer" parent="."]

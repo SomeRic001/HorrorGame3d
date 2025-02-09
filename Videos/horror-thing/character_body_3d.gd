@@ -97,7 +97,7 @@ func _rotate_cam(delta:float , sense_mod:float =1.0):
 	
 func _bob(time):
 	var pos= Vector3.ZERO
-	pos.y = sin(bob_freq*time)*bob_amp
+	pos.y = sin(bob_freq*time)*bob_amp+0.37
 	pos.x = cos(bob_freq*time/2)*bob_amp
 	return pos
 
