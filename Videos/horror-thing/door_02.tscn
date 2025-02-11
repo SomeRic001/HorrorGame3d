@@ -226,10 +226,11 @@ libraries = {
 }
 
 [node name="Label" type="Label" parent="."]
-offset_left = 18.0
-offset_top = 219.0
-offset_right = 530.0
-offset_bottom = 261.0
+z_index = 2
+offset_left = 12.0
+offset_top = 216.0
+offset_right = 524.0
+offset_bottom = 258.0
 theme_override_fonts/font = ExtResource("5_oe6be")
 theme_override_font_sizes/font_size = 20
 text = "Press 'E' to open and close the door"

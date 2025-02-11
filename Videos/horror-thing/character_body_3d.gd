@@ -1,13 +1,13 @@
 extends CharacterBody3D
 
 
-var SPEED = 3.0
+var SPEED = 4.0
 const JUMP_VELOCITY = 4.5
 var cap_mouse =true
 var look_dir : Vector2
 @onready var camera = $Camera3D
 var horizontal_sensitivity = 0.1  
-var vertical_sensitivity = 0.005
+var vertical_sensitivity = 0.009
 var bob_freq = 2
 var bob_amp = 0.05
 var t_bob = 0
@@ -65,9 +65,9 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	if Input.is_action_pressed("Sprint"):
-		SPEED =4.5
+		SPEED =5.5
 	else:
-		SPEED = 3.0
+		SPEED = 4
 	_rotate_cam(delta)
 	if not _snap_up_stairs_check(delta):
 		_snap_down_to_stairs_check()

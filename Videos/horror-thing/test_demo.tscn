@@ -17,13 +17,13 @@ ground_bottom_color = Color(0, 0, 0, 1)
 ground_horizon_color = Color(0, 0, 0, 1)
 energy_multiplier = 2.0
 
-[sub_resource type="Sky" id="Sky_lghvn"]
+[sub_resource type="Sky" id="Sky_vocuv"]
 sky_material = SubResource("ProceduralSkyMaterial_o4v25")
 
 [sub_resource type="Environment" id="Environment_k8ij0"]
 background_mode = 2
-background_energy_multiplier = 0.7
-sky = SubResource("Sky_lghvn")
+background_energy_multiplier = 2.0
+sky = SubResource("Sky_vocuv")
 ambient_light_color = Color(0.74978, 0.74978, 0.74978, 1)
 reflected_light_source = 1
 fog_light_color = Color(0.339289, 0.369116, 0.416002, 1)
@@ -67,7 +67,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.4623, 9.49, 49.67)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2507, 9.49, 63.9437)
 
 [node name="DungeonRoom3D" parent="." instance=ExtResource("9_jp34d")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 14.6957, 9.49, 69.7)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 14.164, 9.579, 69.7)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_k8ij0")
