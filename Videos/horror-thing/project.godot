@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Horror thing"
 run/main_scene="res://test_demo.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -33,7 +33,11 @@ project/assembly_name="Horror thing"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/SimpleDungeons/plugin.cfg", "res://addons/cyclops_level_builder/plugin.cfg", "res://addons/debug_menu/plugin.cfg", "res://addons/func_godot/plugin.cfg")
+enabled=PackedStringArray("res://addons/cyclops_level_builder/plugin.cfg", "res://addons/debug_menu/plugin.cfg", "res://addons/func_godot/plugin.cfg")
+
+[global_group]
+
+player=""
 
 [input]
 

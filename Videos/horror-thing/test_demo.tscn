@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dw2x1xd18xx0r"]
+[gd_scene load_steps=15 format=3 uid="uid://dw2x1xd18xx0r"]
 
 [ext_resource type="PackedScene" uid="uid://dd17b8k81gw7" path="res://room_1.tscn" id="1_3uq2y"]
 [ext_resource type="PackedScene" uid="uid://bw2ctgetgebuf" path="res://stair.tscn" id="1_v0sa4"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://vpnggjuvhbcd" path="res://l_iving.tscn" id="7_u3rkn"]
 [ext_resource type="PackedScene" uid="uid://dkk16xvedqise" path="res://finalroom.tscn" id="8_w037p"]
 [ext_resource type="PackedScene" uid="uid://bbgssgnxahqgo" path="res://barthroom.tscn" id="9_jp34d"]
+[ext_resource type="Texture2D" uid="uid://ca0b1vecgsps0" path="res://textures/world/Bricks_25-128x128.png" id="10_qoeud"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o4v25"]
 sky_top_color = Color(0.143568, 0.179274, 0.228927, 1)
@@ -31,11 +32,14 @@ fog_light_energy = 4.54
 fog_aerial_perspective = 0.675
 fog_sky_affect = 0.0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6ao6x"]
+albedo_texture = ExtResource("10_qoeud")
+
 [node name="Test-demo" type="Node3D"]
 transform = Transform3D(0.998076, 0, 0, 0, 0.998076, 0, 0, 0, 0.998076, 0, 0, 0)
 
 [node name="Stair" parent="." instance=ExtResource("1_v0sa4")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.42907, 5, 24.75)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.42876, 5.00297, 24.75)
 
 [node name="Stair2" parent="." instance=ExtResource("1_v0sa4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.2, 5.005, 39.386)
@@ -47,6 +51,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.545, 0.022, 9.88)
 
 [node name="Corridor3" parent="." instance=ExtResource("2_sotho")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.2983, 9.49, 38.997)
+
+[node name="Corridor4" parent="." instance=ExtResource("2_sotho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.2805, 9.48472, 58.8589)
 
 [node name="Corridor2" parent="." instance=ExtResource("2_sotho")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.2928, 0.022, 10.4198)
@@ -60,11 +67,14 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 54.21,
 [node name="kitchen" parent="." instance=ExtResource("6_mk2eo")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 54.21, 0.022, 34.58)
 
+[node name="kitchen2" parent="." instance=ExtResource("6_mk2eo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.898, 9.49, 68.759)
+
 [node name="LIving" parent="." instance=ExtResource("7_u3rkn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.4623, 9.49, 49.67)
 
 [node name="Final" parent="." instance=ExtResource("8_w037p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2507, 9.49, 63.9437)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.254, 9.49, 63.9088)
 
 [node name="DungeonRoom3D" parent="." instance=ExtResource("9_jp34d")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 14.164, 9.579, 69.7)
@@ -76,3 +86,62 @@ environment = SubResource("Environment_k8ij0")
 transform = Transform3D(1.00193, 0, 0, 0, 0.52583, 0.852855, 0, -0.852855, 0.52583, 0, 4.45734, 0)
 visible = false
 light_energy = 10.0
+
+[node name="Wall" type="Node3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Wall"]
+transform = Transform3D(0.232003, 0, 0, 0, -1.74848e-07, -2.072, 0, 4, -9.05712e-08, -0.0725752, -2.44617, 9.8991)
+material_override = SubResource("StandardMaterial3D_6ao6x")
+use_collision = true
+size = Vector3(1, 1.04187, 1.95934)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Wall"]
+transform = Transform3D(0.232002, 0, 0, 0, -1.74848e-07, -2.072, 0, 4, -9.05711e-08, -0.0725752, 1.24898, 9.8991)
+material_override = SubResource("StandardMaterial3D_6ao6x")
+use_collision = true
+size = Vector3(1, 1.04187, 1.70019)
+
+[node name="Wall2" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.4515, 9.52262, 43.4825)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Wall2"]
+transform = Transform3D(0.232003, 0, 0, 0, -1.74848e-07, -2.072, 0, 4, -9.05712e-08, -0.0725752, -2.44617, 9.8991)
+material_override = SubResource("StandardMaterial3D_6ao6x")
+use_collision = true
+size = Vector3(1, 1.04187, 1.95934)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Wall2"]
+transform = Transform3D(0.232002, 0, 0, 0, -1.74848e-07, -2.072, 0, 4, -9.05711e-08, -0.0725752, 1.24898, 9.8991)
+material_override = SubResource("StandardMaterial3D_6ao6x")
+use_collision = true
+size = Vector3(1, 1.04187, 1.70019)
+
+[node name="Wall3" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.451, 9.523, 54.153)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Wall3"]
+transform = Transform3D(0.232003, 0, 0, 0, -1.74848e-07, -2.072, 0, 4, -9.05712e-08, -0.0725752, -2.44617, 9.8991)
+material_override = SubResource("StandardMaterial3D_6ao6x")
+use_collision = true
+size = Vector3(1, 1.04187, 1.95934)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Wall3"]
+transform = Transform3D(0.232002, 0, 0, 0, -1.74848e-07, -2.072, 0, 4, -9.05711e-08, -0.0725752, 1.24898, 9.8991)
+material_override = SubResource("StandardMaterial3D_6ao6x")
+use_collision = true
+size = Vector3(1, 1.04187, 1.70019)
+
+[node name="Wall4" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.4878, 9.523, 58.7904)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Wall4"]
+transform = Transform3D(0.232003, 0, 0, 0, -1.74848e-07, -2.072, 0, 4, -9.05712e-08, -0.0725752, -2.44617, 9.8991)
+material_override = SubResource("StandardMaterial3D_6ao6x")
+use_collision = true
+size = Vector3(1, 1.04187, 1.95934)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Wall4"]
+transform = Transform3D(0.232002, 0, 0, 0, -1.74848e-07, -2.072, 0, 4, -9.05711e-08, -0.0725752, 1.24898, 9.8991)
+material_override = SubResource("StandardMaterial3D_6ao6x")
+use_collision = true
+size = Vector3(1, 1.04187, 1.70019)

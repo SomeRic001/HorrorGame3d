@@ -1,6 +1,5 @@
-[gd_scene load_steps=19 format=4 uid="uid://dqsa4fxf5bs2n"]
+[gd_scene load_steps=18 format=4 uid="uid://dqsa4fxf5bs2n"]
 
-[ext_resource type="Script" path="res://addons/SimpleDungeons/DungeonRoom3D.gd" id="1_qhj78"]
 [ext_resource type="Script" path="res://addons/func_godot/src/map/func_godot_map.gd" id="2_ng3x7"]
 [ext_resource type="Resource" uid="uid://bkhxcqsquw1yg" path="res://addons/func_godot/func_godot_default_map_settings.tres" id="3_cqyk8"]
 [ext_resource type="Material" uid="uid://dh3bgwxvtcj8p" path="res://textures/world/Wood_06-128x128.tres" id="4_8md00"]
@@ -81,8 +80,6 @@ points = PackedVector3Array(1.5, 9, 0.5, 1.5, 7.5, 0.5, 2, 7.5, 0.5, 2, 9, 0.5, 
 points = PackedVector3Array(-27.5, 9, 7.25, -27.5, 0, 7.25, 1.5, 0, 7.25, 1.5, 9, 7.25, -27.5, 9, 7.75, -27.5, 0, 7.75, 1.5, 0, 7.75, 1.5, 9, 7.75)
 
 [node name="Hallway" type="Node3D"]
-script = ExtResource("1_qhj78")
-size_in_voxels = Vector3i(3, 1, 1)
 
 [node name="FuncGodotMap" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9612, -4.4974, -2.88461)

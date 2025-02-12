@@ -1,6 +1,5 @@
-[gd_scene load_steps=23 format=4 uid="uid://c2l5a6p4ak47u"]
+[gd_scene load_steps=22 format=4 uid="uid://c2l5a6p4ak47u"]
 
-[ext_resource type="Script" path="res://addons/SimpleDungeons/DungeonRoom3D.gd" id="1_6y1o0"]
 [ext_resource type="Script" path="res://addons/func_godot/src/map/func_godot_map.gd" id="2_s5p3j"]
 [ext_resource type="Resource" uid="uid://bkhxcqsquw1yg" path="res://addons/func_godot/func_godot_default_map_settings.tres" id="3_t8kjo"]
 [ext_resource type="Material" uid="uid://dh3bgwxvtcj8p" path="res://textures/world/Wood_06-128x128.tres" id="4_j1575"]
@@ -93,7 +92,6 @@ points = PackedVector3Array(-9.5, 9, -9.5, -9.5, 7.5, -9.5, -9, 7.5, -9.5, -9, 9
 points = PackedVector3Array(-9.5, 9, -3, -9.5, 0, -3, -9, 0, -3, -9, 9, -3, -9.5, 9, -0.5, -9.5, 0, -0.5, -9, 0, -0.5, -9, 9, -0.5)
 
 [node name="Corridor" type="Node3D"]
-script = ExtResource("1_6y1o0")
 
 [node name="FuncGodotMap" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.47236, -4.48336, 4.9775)

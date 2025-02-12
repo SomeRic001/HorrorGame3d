@@ -1,6 +1,5 @@
-[gd_scene load_steps=48 format=4 uid="uid://bbgssgnxahqgo"]
+[gd_scene load_steps=47 format=4 uid="uid://bbgssgnxahqgo"]
 
-[ext_resource type="Script" path="res://addons/SimpleDungeons/DungeonRoom3D.gd" id="1_l7lvq"]
 [ext_resource type="Script" path="res://addons/func_godot/src/map/func_godot_map.gd" id="2_3w8l8"]
 [ext_resource type="Resource" uid="uid://bkhxcqsquw1yg" path="res://addons/func_godot/func_godot_default_map_settings.tres" id="3_ds5gy"]
 [ext_resource type="Material" uid="uid://btrgq43il2eld" path="res://textures/world/Tile_15-128x128.tres" id="4_k4isd"]
@@ -186,7 +185,6 @@ points = PackedVector3Array(-8.875, 4.25, -16.5, -8.875, 3.875, -16.5, -8.75, 3.
 points = PackedVector3Array(-9, 4.5, -16.75, -9, 4.25, -16.75, -8.5, 4.25, -16.75, -8.5, 4.5, -16.75, -9, 4.5, -16.25, -9, 4.25, -16.25, -8.5, 4.25, -16.25, -8.5, 4.5, -16.25)
 
 [node name="DungeonRoom3D" type="Node3D"]
-script = ExtResource("1_l7lvq")
 
 [node name="FuncGodotMap" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7112, -4.59797, 14.5044)
